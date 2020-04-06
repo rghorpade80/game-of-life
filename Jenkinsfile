@@ -8,8 +8,8 @@ pipeline {
     }
 	
 	options {
-				buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '2')
-			}
+			buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '2')
+		}
 
 	stages {
         stage('Build') {
@@ -50,7 +50,7 @@ pipeline {
             when {
                 branch 'master'
             }
-
+            
             steps {
                 input 'Deploy to Production?'
                 milestone(1)
@@ -63,3 +63,5 @@ pipeline {
                 )
             }
         }
+	}
+}
