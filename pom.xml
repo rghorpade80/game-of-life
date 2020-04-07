@@ -420,18 +420,8 @@
                 </plugins>
             </build>
 			
-			<distributionManagement>
-				<repository>
-					<id>nexus_server</id>
-					<!-- CHANGE HERE by your team nexus server -->
-					<url>http://18.217.235.209:8081/repository/game-of-life/</url>
-				</repository>
-				<snapshotRepository>
-					<id>snapshots</id>
-					<!-- CHANGE HERE by your team nexus server -->
-					<url>http://18.217.235.209:8081/repository/game-of-life/</url>
-				</snapshotRepository>
-			</distributionManagement>
+			
+
 			
             <reporting>
                 <plugins>
@@ -509,4 +499,20 @@
             </reporting>
         </profile>
     </profiles>
+	
+	
+	
+	<distributionManagement>
+		<repository>
+			<id>nexus_server</id>
+			<!-- CHANGE HERE by your team nexus server -->
+			<url>http://18.217.235.209:8081/repository/game-of-life/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<!-- CHANGE HERE by your team nexus server -->
+			<url>http://18.217.235.209:8081/repository/game-of-life/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
 </project>
