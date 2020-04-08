@@ -502,17 +502,17 @@
 	
 	
 	
-	<distributionManagement>
-		<repository>
-			<id>nexus_server</id>
-			<!-- CHANGE HERE by your team nexus server -->
-			<url>http://18.217.235.209:8081/repository/game-of-life/</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<!-- CHANGE HERE by your team nexus server -->
-			<url>http://18.217.235.209:8081/repository/game-of-life/</url>
-		</snapshotRepository>
-	</distributionManagement>
+<distributionManagement>
+	<repository>
+		<id>nexus_server</id>
+		<name>maven-releases</name>
+		<url>http://13.59.121.223:8081/repository/maven-releases/</url>
+	</repository>
+	<snapshotRepository>
+		<id>nexus_server</id>
+		<name>maven-snapshots</name>
+		<url>http://13.59.121.223:8081/repository/maven-snapshots/</url>
+	</snapshotRepository>
+</distributionManagement>
 	
 </project>
