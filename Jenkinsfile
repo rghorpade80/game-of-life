@@ -59,7 +59,7 @@ pipeline {
 		
 		stage('DeployToProduction') {
             when {
-                branch 'master'
+                branch 'gameoflife-release-2.0.0'
             }
             
             steps {
