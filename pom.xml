@@ -504,14 +504,14 @@
 	
 <distributionManagement>
 	<repository>
-		<id>nexus_server</id>
+		<id>nexus</id>
 		<name>maven-releases</name>
-		<url>http://13.59.121.223:8081/repository/maven-releases/</url>
+		<url>http://3.135.224.152:8081/repository/maven-releases/</url>
 	</repository>
 	<snapshotRepository>
-		<id>nexus_server</id>
+		<id>nexus</id>
 		<name>maven-snapshots</name>
-		<url>http://13.59.121.223:8081/repository/maven-snapshots/</url>
+		<url>http://3.135.224.152:8081/repository/maven-snapshots/</url>
 	</snapshotRepository>
 </distributionManagement>
 	
