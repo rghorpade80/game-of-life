@@ -47,7 +47,12 @@ pipeline {
                     docker.withRegistry('https://registry.hub.docker.com', 'docker_hub_login') {
                         app.push("${SHORT_COMMIT}")
                         app.push("latest")
-			sh 'docker image prune -a'
+			    
+			/*Delete stoped container & images to free space on jenkins server */
+			sh 'docker rm -f $(docker ps -aq)'
+			sh 'docker image prune -a --force'
+			
+			    
                     }
                 }
             }
