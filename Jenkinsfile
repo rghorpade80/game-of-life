@@ -48,8 +48,7 @@ pipeline {
                         app.push("${SHORT_COMMIT}")
                         app.push("latest")
 			    
-			/*Delete stoped container & images to free space on jenkins server */
-			sh 'docker rm -f $(docker ps -aq)'
+			/*Delete images to free space on jenkins server */
 			sh 'docker image prune -a --force'
 			
 			    
