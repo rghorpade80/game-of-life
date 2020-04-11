@@ -26,7 +26,7 @@ pipeline {
 		
 		stage('Build Docker Image') {
             when {
-                branch 'master'
+                branch 'gameoflife-release-2.0.0'
             }
             steps {
                 script {
@@ -40,7 +40,7 @@ pipeline {
 		
 		stage('Push Docker Image') {
             when {
-                branch 'master'
+                branch 'gameoflife-release-2.0.0'
             }
             steps {
                 script {
