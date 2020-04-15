@@ -15,6 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean deploy'
+		junit 'gameoflife-web/target/surefire-reports/*.xml'
             }
         }
 				
@@ -77,12 +78,12 @@ pipeline {
         }
 	}
 	
-	 post {
+/*	 post {
         always {
             archiveArtifacts artifacts: 'gameoflife-web/target/*.war', fingerprint: true
             junit 'gameoflife-web/target/surefire-reports/*.xml'
         }
-    }
+    }    */
 	
 	
 	
