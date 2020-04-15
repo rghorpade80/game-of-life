@@ -17,15 +17,7 @@ pipeline {
                 sh 'mvn clean deploy'
             }
         }
-		
-	post {
-      	 always {
-            	
-            	junit 'target/reports/**/*.xml'
-       		 }
-   	    }
-		
-			
+				
 		
 	stage('nexusArtifactUpload') {
             steps {
@@ -46,6 +38,13 @@ pipeline {
                 }
             }
         }
+		
+		post {
+      	 always {
+            	
+            	junit 'target/reports/**/*.xml'
+       		 }
+   	    }
 		
 		stage('Push Docker Image') {
             when {
