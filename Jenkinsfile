@@ -38,14 +38,7 @@ pipeline {
                 }
             }
         }
-		
-		post {
-      	 always {
-            	
-            	junit 'target/reports/**/*.xml'
-       		 }
-   	    }
-		
+				
 		stage('Push Docker Image') {
             when {
                 branch 'master'
@@ -83,4 +76,14 @@ pipeline {
             }
         }
 	}
+	
+	 post {
+        always {
+            archiveArtifacts artifacts: 'gameoflife-web/target/*.jar', fingerprint: true
+            junit 'gameoflife-web/target/surefire-reports/*.xml'
+        }
+    }
+	
+	
+	
 }
