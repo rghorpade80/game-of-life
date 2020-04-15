@@ -79,7 +79,7 @@ pipeline {
 	
 	 post {
         always {
-            archiveArtifacts artifacts: 'gameoflife-web/target/*.jar', fingerprint: true
+            archiveArtifacts artifacts: 'gameoflife-web/target/*.war', fingerprint: true
             junit 'gameoflife-web/target/surefire-reports/*.xml'
         }
     }
