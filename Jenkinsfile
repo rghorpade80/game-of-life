@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        //be sure to replace "willbla" with your own Docker Hub username
+        //be sure to replace "rghorpade80" with your own Docker Hub username
         DOCKER_IMAGE_NAME = "rghorpade80/gameoflife"
         //GIT_COMMIT jenkins variable to tag docker images (first 7 chra of git commit hash)
         SHORT_COMMIT = "${GIT_COMMIT[0..7]}"
