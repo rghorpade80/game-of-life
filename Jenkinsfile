@@ -22,7 +22,7 @@ pipeline {
 		
 	stage('nexusArtifactUpload') {
             steps {
-                nexusArtifactUploader artifacts: [[artifactId: 'gameoflife', classifier: '', file: 'gameoflife-web/target/gameoflife.war', type: '.war']], credentialsId: 'Nexus_credentials', groupId: 'com.wakaleo.gameoflife', nexusUrl: '13.58.106.100:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots/', version: '1.0-SNAPSHOT'
+                nexusArtifactUploader artifacts: [[artifactId: 'gameoflife', classifier: '', file: 'gameoflife-web/target/gameoflife.war', type: '.war']], credentialsId: 'Nexus_credentials', groupId: 'com.wakaleo.gameoflife', nexusUrl: '18.217.215.95:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots/', version: '1.0-SNAPSHOT'
             }
         }    
 		
