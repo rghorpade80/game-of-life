@@ -69,8 +69,7 @@ pipeline {
                 milestone(1)
                 
                
-                //kubernetesDeploy(
-                kubernetes(
+                kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
                     configs: 'game-of-life.yml',
                     enableConfigSubstitution: true
