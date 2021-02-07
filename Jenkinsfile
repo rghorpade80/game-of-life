@@ -64,19 +64,26 @@ pipeline {
             //     branch 'master'
             // }
             
-            steps {
-                input 'Deploy to Production?'
-                milestone(1)
+            // steps {
+            //     input 'Deploy to Production?'
+            //     milestone(1)
                 
                
-                kubernetesDeploy(
-                    kubeconfigId: 'kubeconfig',
-                    configs: 'game-of-life.yaml',
-                    enableConfigSubstitution: true
-                )
+            //     kubernetesDeploy(
+            //         kubeconfigId: 'kubeconfig',
+            //         configs: 'game-of-life.yaml',
+            //         enableConfigSubstitution: true
+            //     )
 
                 
+            // }
+
+                steps{
+					kubernetesDeploy configs: 'game-of-life.yaml', kubeConfig: [path: ''], kubeconfigId: 'kubeconfig', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+					
             }
+
+
         }
 	}
 
