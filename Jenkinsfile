@@ -90,9 +90,9 @@ pipeline {
 			   
                            input 'Deploy to Production?'
                            milestone(1)
+
+                           sh 'kubectl apply -f /var/lib/jenkins/workspace/game-of-life/game-of-life.yaml'
                            
-                           sh '/var/lib/jenkins/workspace/game-of-life'
-                           sh 'kubectl apply -f game-of-life.yaml'
                            
                 
                 
