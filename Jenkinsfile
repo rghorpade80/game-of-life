@@ -14,7 +14,7 @@ pipeline {
 	stages {
         stage('Build') {
             steps {
-                sh 'mvn clean deploy'
+                sh 'mvn clean install'
 		junit 'gameoflife-web/target/surefire-reports/*.xml'
             }
         }
