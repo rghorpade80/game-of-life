@@ -71,7 +71,7 @@ pipeline {
                
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
-                    configs: 'game-of-life.yml',
+                    configs: 'game-of-life.yaml',
                     enableConfigSubstitution: true
                 )
 
