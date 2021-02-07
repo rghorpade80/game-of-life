@@ -65,8 +65,8 @@ pipeline {
             // }
             
             // steps {
-            //     input 'Deploy to Production?'
-            //     milestone(1)
+                // input 'Deploy to Production?'
+                // milestone(1)
                 
                
             //     kubernetesDeploy(
@@ -78,9 +78,24 @@ pipeline {
                 
             // }
 
-                steps{
-					kubernetesDeploy configs: 'game-of-life.yaml', kubeConfig: [path: ''], kubeconfigId: 'kubeconfig', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+////////////////////   second method /////////////////////////////////
+
+            //     steps{
+			// 		kubernetesDeploy configs: 'game-of-life.yaml', kubeConfig: [path: ''], kubeconfigId: 'kubeconfig', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
 					
+            // }
+
+
+                   steps{
+			   
+                           input 'Deploy to Production?'
+                           milestone(1)
+                           
+                           sh '/var/lib/jenkins/workspace/game-of-life'
+                           sh 'kubectl apply -f game-of-life.yaml'
+                           
+                
+                
             }
 
 
