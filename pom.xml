@@ -502,7 +502,7 @@
 	
 	
 	
-<distributionManagement>
+<!-- <distributionManagement>
 	<repository>
 		<id>nexus</id>
 		<name>maven-releases</name>
@@ -513,6 +513,6 @@
 		<name>maven-snapshots</name>
 		<url>http://172.31.18.155:8081/repository/maven-snapshots/</url>
 	</snapshotRepository>
-</distributionManagement>
+</distributionManagement> -->
 	
 </project>
